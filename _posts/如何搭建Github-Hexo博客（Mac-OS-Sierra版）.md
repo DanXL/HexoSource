@@ -9,11 +9,10 @@ tags:
 在搭建Sierra+Github+Hexo时，主要参考了[Shumin_Wu](http://www.jianshu.com/p/fd878edb95e7)的教程，基本上算是一篇很详实的搭建教程。一直也是同样的三部分： 
 1. 环境搭建，包括node.js、homebrew、git和Hexo的安装和部署；
 2. github.com中gh-pages的创建； 
-3. 本地新文章的创建和发布。 
+3. 本地新文章的创建和发布。  
 
-
-##环境搭建，包括node.js、homebrew、Hexo的安装
-####下载node.js并安装
+## 环境搭建，包括node.js、homebrew、Hexo的安装  
+#### 下载node.js并安装
 node.js的安装由于网络的原因，建议还是从有效途径下载安装包后，再进行本地安装，如科学上网。不推荐使用brew来安装，会被墙掉。 
 成功安装后，Terminal中执行
 
@@ -22,9 +21,9 @@ xiaoleis-MacBook-Pro:~xiaoleidan$node -version
 xiaoleis-MacBook-Pro:~xiaoleidan$npm -version
 ```
 可以查看node.js的版本，其中npm是node.js的安装包中所集成的。
-####下载homebrew并安装
+#### 下载homebrew并安装
 homebrew是OSX上用来安装或者卸载软件常用的一个软件，我们可以用来安装git。可以在[homebrew官网](http://brew.sh/index_zh-cn.html)来下载Homebrew，上面的安装方法也很详实。注意此处可能需要管理员权限sudo。否则会出现安装失败的情形。 
-####下载git并安装
+#### 下载git并安装
 git的安装其实有几种方法，可以用[Git OSX installer](https://git-scm.com/downloads)来安装，也可以通过Homebrew或者MacPorts来安装。由于墙内下载安装包困难，MacPorts又需要XCode的支持，我在这里选择了小巧而方便的Homebrew的方法。直接输入terminal指令：
 
 ```shell
@@ -32,7 +31,7 @@ xiaoleis-MacBook-Pro:~xiaoleidan$ sudo brew install git
 ```
 即可。
 这里对terminal操作不熟悉的同学，直接下载[github desktop for mac](https://central.github.com/mac/latest)就好了。
-####下载Hexo并安装
+#### 下载Hexo并安装
 Hexo的安装也是参考[官网文档](https://hexo.io/zh-cn/docs/)的指导，在满足的了preacquision的Git和node.js之后，只需要利用npm进行安装即可。
 在使用命令进行安装时，除了系统软件，都会安装到当前路径下。hexo和npm在安装的时候有默认的文件路径，因此我们不用刻意创建文件夹。
 在安装hexo的时候有可能会遇到以下错误：
@@ -41,8 +40,10 @@ Hexo的安装也是参考[官网文档](https://hexo.io/zh-cn/docs/)的指导，
 { [Error: Cannot find module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }  
 { [Error: Cannot find module './build/default/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }  
 { [Error: Cannot find module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }  
-```  
+```
+
 这是因为不分组件被GFW挡住了，换一个源即可：
+
 
 ```shell
 xiaoleis-MacBook-Pro:~xiaoleidan$ npm install hexo --no-optional
@@ -51,7 +52,7 @@ hexo 安装成功后，运行
 
 ```shell
 xiaoleis-MacBook-Pro:~xiaoleidan$ hexo -v
-```  
+```   
 检测安装是否成功。  
 另外，一些hexo的组件需要单独安装的话，使用以下命令：
 
@@ -98,10 +99,10 @@ xiaoleis-MacBook-Pro:~xiaoleidan$ hexo server
 
 关于hexo的一些常见命令和Windows环境下的一样，在此就不赘述了。
 
-##Github中git-pages的创建
+## Github中git-pages的创建
 这里，git-pages的创建没有区分操作系统，所以和Windows系统中介绍的一致，请参考[如何搭建Github+Hexo博客（windows版）](https://danxl.github.io/2016/11/29/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAGithub-Hexo%E5%8D%9A%E5%AE%A2/)。  
 
-##本地文章的创建并发布
+## 本地文章的创建并发布
 环境部署完毕，gh-page设置好之后，创建文章并发布出来即可。
 想要生成一篇文章，首先我们利用
 
